@@ -1,0 +1,24 @@
+version: '2'
+services:
+  web:
+    build: .
+    image: wearekick/dummy-node-project
+    container_name: dummy-node-project
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/app/project/app
+      - ./assets:/var/app/project/assets
+      - ./scss:/var/app/project/scss
+      - ./test:/var/app/project/test
+    depends_on:
+      - db
+    command: npm run start:dev
+  db:
+    image: mysql:5.6
+    environment:
+      MYSQL_ROOT_PASSWORD: D0ck3R-r00T
+    volumes:
+      - ./mysql/.:/docker-entrypoint-initdb.d
+    expose:
+      - "3306"

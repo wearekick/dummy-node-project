@@ -1,0 +1,10 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - docker info
+    - docker build --rm=false -t wearekick/dummy-node-project .
+test:
+  override:
+    - docker run wearekick/dummy-node-project npm run ci

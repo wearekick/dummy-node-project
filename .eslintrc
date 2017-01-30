@@ -1,0 +1,14 @@
+{
+  "extends": "standard",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "plugins": [
+    "mocha"
+  ],
+  "globals": {
+    "expect": true
+  }
+}

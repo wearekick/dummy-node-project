@@ -1,0 +1,33 @@
+instrumentation:
+  root: ./app
+  extensions:
+    - .js
+  default-excludes: true
+  excludes:
+  # put files or paths to exclude here
+  # - "config.js"
+  compact: true
+  include-all-sources: true
+reporting:
+  print: summary
+  reports:
+    - lcov
+  dir: ./coverage
+  watermarks:
+    statements: [50, 80]
+    lines: [50, 80]
+    functions: [50, 80]
+    branches: [50, 80]
+check:
+  global:
+    statements: 95
+    lines: 95
+    branches: 95
+    functions: 95
+    excludes: []
+  each:
+    statements: 95
+    lines: 95
+    branches: 95
+    functions: 95
+    excludes: []

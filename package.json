@@ -1,0 +1,41 @@
+{
+  "name": "dummy-node-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/server.js",
+  "scripts": {
+    "coverage": "npm run test:unit --coverage",
+    "coverage:html": "npm run coverage && open ./coverage/lcov-report/index.html",
+    "ci": "npm run lint && npm run coverage",
+    "lint": "eslint **/*.js && echo '✓ Linting successful'",
+    "nodemon": "node_modules/.bin/nodemon app/server.js",
+    "sass:build": "node-sass -r --output-style compressed --include-path scss scss/main.scss -o assets/css",
+    "sass:watch": "npm run sass:build && npm run sass:build -- -w",
+    "start:dev": "npm run sass:watch & npm run nodemon",
+    "test": "npm run test:unit",
+    "test:unit": "istanbul test ./node_modules/mocha/bin/_mocha -- test/unit"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "dirty-chai": "^1.2.2",
+    "eslint": "^3.4.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-mocha": "^4.5.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.11.0",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "node-sass": "4.4.0"
+  },
+  "engines": {
+    "node": "6",
+    "npm": "3"
+  }
+}

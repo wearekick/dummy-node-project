@@ -1,5 +1,5 @@
 {
-  "name": "dummy-node-project",
+  "name": "kickfolio",
   "version": "1.0.0",
   "description": "",
   "main": "./app/server.js",

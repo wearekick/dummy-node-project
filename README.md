@@ -84,7 +84,7 @@ Using `docker ps` you can find the container name.
 docker ps
 
 CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                  NAMES
-e87f92d946d1        RichDKick/kickfolio            "npm run start:dev"      7 minutes ago       Up 7 minutes        0.0.0.0:8080->80/tcp   kickfolio
+e87f92d946d1        richdkick/kickfolio            "npm run start:dev"      7 minutes ago       Up 7 minutes        0.0.0.0:8080->80/tcp   kickfolio
 7ef7d109abb0        mysql:5.6                      "docker-entrypoint..."   7 minutes ago       Up 7 minutes        3306/tcp               kickfolio_db_1
 ```
 

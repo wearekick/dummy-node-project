@@ -4,7 +4,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build --rm=false -t RichDKick/kickfolio .
+    - docker build --rm=false -t richdkick/kickfolio .
 test:
   override:
-    - docker run RichDKick/kickfolio npm run ci
+    - docker run richdkick/kickfolio npm run ci

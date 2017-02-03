@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build: .
-    image: RichDKick/kickfolio
+    image: richdkick/kickfolio
     container_name: kickfolio
     ports:
       - "8080:80"

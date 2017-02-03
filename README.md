@@ -102,7 +102,7 @@ If the container isn't running you can still run a single command.
 
 ```
 # Start container, gain access and run a single command
-docker run RichDKick/kickfolio echo "Hello"
+docker run richdkick/kickfolio echo "Hello"
 ```
 
 ### Code Quality

@@ -2,8 +2,8 @@ version: '2'
 services:
   web:
     build: .
-    image: wearekick/dummy-node-project
-    container_name: dummy-node-project
+    image: wearekick/kickfolio
+    container_name: kickfolio
     ports:
       - "8080:80"
     volumes:

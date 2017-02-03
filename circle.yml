@@ -4,7 +4,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build --rm=false -t wearekick/dummy-node-project .
+    - docker build --rm=false -t wearekick/kickfolio .
 test:
   override:
-    - docker run wearekick/dummy-node-project npm run ci
+    - docker run wearekick/kickfolio npm run ci

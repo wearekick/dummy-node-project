@@ -84,7 +84,7 @@ Using `docker ps` you can find the container name.
 docker ps
 
 CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                  NAMES
-e87f92d946d1        wearekick/kickfolio            "npm run start:dev"      7 minutes ago       Up 7 minutes        0.0.0.0:8080->80/tcp   kickfolio
+e87f92d946d1        richdkick/kickfolio            "npm run start:dev"      7 minutes ago       Up 7 minutes        0.0.0.0:8080->80/tcp   kickfolio
 7ef7d109abb0        mysql:5.6                      "docker-entrypoint..."   7 minutes ago       Up 7 minutes        3306/tcp               kickfolio_db_1
 ```
 
@@ -102,7 +102,7 @@ If the container isn't running you can still run a single command.
 
 ```
 # Start container, gain access and run a single command
-docker run wearekick/kickfolio echo "Hello"
+docker run richdkick/kickfolio echo "Hello"
 ```
 
 ### Code Quality

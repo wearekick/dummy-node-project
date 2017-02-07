@@ -1,8 +1,8 @@
-# Dummy Node Project
+# Kickfolio Node Project
 
 ## Introduction
 
-This is a dummy project that gives a quick setup that includes:
+This is a Kickfolio project that gives a quick setup that includes:
 
 - NodeJS v6
 - SASS
@@ -84,25 +84,25 @@ Using `docker ps` you can find the container name.
 docker ps
 
 CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                  NAMES
-e87f92d946d1        wearekick/dummy-node-project   "npm run start:dev"      7 minutes ago       Up 7 minutes        0.0.0.0:8080->80/tcp   dummy-node-project
-7ef7d109abb0        mysql:5.6                      "docker-entrypoint..."   7 minutes ago       Up 7 minutes        3306/tcp               dummynodeproject_db_1
+e87f92d946d1        richdkick/kickfolio            "npm run start:dev"      7 minutes ago       Up 7 minutes        0.0.0.0:8080->80/tcp   kickfolio
+7ef7d109abb0        mysql:5.6                      "docker-entrypoint..."   7 minutes ago       Up 7 minutes        3306/tcp               kickfolio_db_1
 ```
 
 To run commands on the container whilst it is running you can use `docker exec`.
 
 ```
 # Gain access to container and keep it open (type exit to close)
-docker exec -it dummy-node-project bash
+docker exec -it kickfolio bash
 
 # Gain access to container and run a single command
-docker exec dummy-node-project echo "Hello"
+docker exec kickfolio echo "Hello"
 ```
 
 If the container isn't running you can still run a single command.
 
 ```
 # Start container, gain access and run a single command
-docker run wearekick/dummy-node-project echo "Hello"
+docker run richdkick/kickfolio echo "Hello"
 ```
 
 ### Code Quality

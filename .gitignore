@@ -1,8 +1,4 @@
-npm-debug.log
-node_modules
-
-.DS_Store
-
-coverage
-
-/app/public/css/main.css
+/npm-debug.log
+/node_modules/*
+/coverage
+/assets/css/main.css

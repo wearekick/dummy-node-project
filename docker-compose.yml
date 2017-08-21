@@ -2,14 +2,15 @@ version: '2'
 services:
   web:
     build: .
-    image: wearekick/kick-commerce-crosswater
-    container_name: kick-commerce-crosswater
+    image: wearekick/dummy-node-project
+    container_name: dummy-node-project
     ports:
-      - "3000:3000"
+      - "8080:80"
     volumes:
-      - ./app:/var/www/app
-      - ./scss:/var/www/scss
-      - ./server.js:/var/www/server.js
+      - ./app:/var/app/project/app
+      - ./assets:/var/app/project/assets
+      - ./scss:/var/app/project/scss
+      - ./test:/var/app/project/test
     depends_on:
       - db
     command: npm run start:dev

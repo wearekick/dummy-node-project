@@ -2,14 +2,14 @@
   "name": "dummy-node-project",
   "version": "1.0.0",
   "description": "",
-  "main": "./app/server.js",
+  "main": "./server.js",
   "scripts": {
     "coverage": "npm run test:unit --coverage",
     "coverage:html": "npm run coverage && open ./coverage/lcov-report/index.html",
     "ci": "npm run lint && npm run coverage",
     "lint": "eslint **/*.js && echo '✓ Linting successful'",
-    "nodemon": "node_modules/.bin/nodemon app/server.js",
-    "sass:build": "node-sass -r --output-style compressed --include-path scss scss/main.scss -o assets/css",
+    "nodemon": "node_modules/.bin/nodemon ./server.js",
+    "sass:build": "node-sass -r --output-style compressed --include-path scss scss/main.scss -o app/public/css",
     "sass:watch": "npm run sass:build && npm run sass:build -- -w",
     "start:dev": "npm run sass:watch & npm run nodemon",
     "test": "npm run test:unit",
@@ -32,7 +32,14 @@
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "node-sass": "4.4.0"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.5",
+    "mysql": "^2.14.1",
+    "node-sass": "^4.5.3",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   },
   "engines": {
     "node": "6",

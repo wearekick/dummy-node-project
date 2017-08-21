@@ -1,0 +1,21 @@
+<div class="section">
+  <div class="row">
+    <div class="col m3">
+      {{> categoryTree}}
+    </div>
+    <div class="col m9">
+      <div class="row">
+        <ul class="tabs z-depth-1">
+          <li class="tab"><a href="#details">Details</a></li>
+          <li class="tab"><a href="#images">Images</a></li>
+          <li class="tab"><a href="#links">Links</a></li>
+          <li class="tab"><a href="#products">Products</a></li>
+        </ul>
+        <div id="details" class="col s12">{{> tabs/details}}</div>
+        <div id="images" class="col s12">{{> tabs/images}}</div>
+        <div id="links" class="col s12">{{> tabs/links}}</div>
+        <div id="products" class="col s12">{{> tabs/products}}</div>
+      </div>
+    </div>
+  </div>
+</div>

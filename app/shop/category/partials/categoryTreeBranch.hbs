@@ -1,0 +1,23 @@
+{{#if children.length}}
+<li>
+  <div class="collapsible-header {{class}} white-text">
+    <i class="material-icons closed">expand_more</i>
+    <i class="material-icons open">expand_less</i>
+    <a href="/app/shop/categories/{{id}}" class="white-text">{{name}}</a>
+  </div>
+  <div class="collapsible-body">
+    <ul class="collapsible">
+      {{#each children}}
+      {{> categoryTreeBranch}}
+      {{/each}}
+    </ul>
+  </div>
+  {{else}}
+</li>
+<li>
+  <div class="collapsible-header {{class}} white-text">
+    <i class="material-icons {{hiddenTextClass}}">expand_more</i>
+    <a href="/app/shop/categories/{{id}}" class="white-text">{{name}}</a>
+  </div>
+</li>
+{{/if}}

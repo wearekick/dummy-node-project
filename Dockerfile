@@ -1,13 +1,14 @@
-FROM node:6
+FROM node:8
 
 # Create app directory
-WORKDIR /var/app/project
+WORKDIR /var/www
 
 # Install app dependencies
-COPY package.json /var/app/project
+COPY package.json /var/www
 RUN npm install
 
 # Bundle app source
-# COPY app /var/app/project/app
+# COPY . /var/www/app
+# COPY scss /var/www/scss
 
 CMD [ "npm", "start" ]

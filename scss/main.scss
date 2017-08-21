@@ -1,1 +1,62 @@
-.app { color: red; }
+// header, main, footer {
+//   padding-left: 300px;
+// }
+//
+// @media only screen and (max-width : 992px) {
+//   header, main, footer {
+//     padding-left: 0;
+//   }
+// }
+//
+
+// .breadcrumb:before {
+//     @extend .blue-text, .text-lighten-4;
+// }
+//
+// .breadcrumb {
+//   @extend .blue-text, .text-lighten-4;
+// }
+//
+// .breadcrumb:last-child {
+//    @extend .blue-text, .text-lighten-4;
+// }
+
+/* ==[ Tree View ]== */
+.tree {
+  margin: 0;
+
+  .collapsible {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .collapsible-header {
+    font-size: 0.83rem;
+    min-height: 2.4rem;
+    line-height: 2.4rem;
+    border-bottom: 0;
+
+    i {
+      width: 1.4rem;
+      font-size: 1rem;
+      margin-right: 0.4rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  .collapsible-body {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .material-icons.closed,
+  .active > .material-icons.open {
+    display: block;
+  }
+
+  .material-icons.open,
+  .active > .material-icons.closed {
+    display: none;
+  }
+}
